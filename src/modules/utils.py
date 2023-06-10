@@ -19,14 +19,14 @@ class Utilities:
         #you can define your API key in .env directly
         if os.path.exists(".env") and os.environ.get("OPENAI_API_KEY") is not None:
             user_api_key = os.environ["OPENAI_API_KEY"]
-            st.sidebar.success("API key loaded from .env", icon="🚀")
+            st.sidebar.success("API키 로딩완료", icon="🚀")
         else:
             if st.session_state.api_key is not None:
                 user_api_key = st.session_state.api_key
-                st.sidebar.success("API key loaded from previous input", icon="🚀")
+                st.sidebar.success("API키 로딩완료", icon="🚀")
             else:
                 user_api_key = st.sidebar.text_input(
-                    label="#### Your OpenAI API key 👇", placeholder="sk-...", type="password"
+                    label="#### API키 입력해주세요 👇", placeholder="sk-...", type="password"
                 )
                 if user_api_key:
                     st.session_state.api_key = user_api_key
