@@ -59,7 +59,7 @@ else:
         with st.form(key="query"):
 
             query = st.text_input("Ask [PandasAI](https://github.com/gventuri/pandas-ai) (look the pandas-AI read-me for how use it)", value="", type="default", 
-                placeholder="e-g : ##학과의 평균환산점수 알려줘"
+                placeholder="e-g : ##학과의 환산점수평균 알려줘. "
                 )
             submitted_query = st.form_submit_button("Submit")
             reset_chat_button = st.form_submit_button("Reset Chat")
