@@ -42,7 +42,6 @@ else:
     uploaded_file = utils.handle_upload(["csv", "xlsx"])
 
     if uploaded_file:
-        sidebar.about()
         
         uploaded_file_content = BytesIO(uploaded_file.getvalue())
         if uploaded_file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" or uploaded_file.type == "application/vnd.ms-excel":
